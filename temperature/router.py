@@ -18,7 +18,7 @@ async def update_temperature(
     db: AsyncSession = Depends(get_db),
 
 ):
-    return await crud.update_temperatures(db=db)
+    return await crud.create_update_temperatures(db=db)
 
 
 @router.get("/temperatures/{city_id}/", response_model=schemas.TemperatureList)
